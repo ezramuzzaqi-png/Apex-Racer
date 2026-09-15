@@ -62,9 +62,12 @@ export const HomeMenu: React.FC<HomeMenuProps> = ({
         {/* Header / Branding */}
         <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
           <div className="flex items-center gap-2.5 text-left">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-lg shadow-rose-600/30 font-racing text-white font-bold text-lg">
-              AR
-            </div>
+            <img
+              src="/favicon.svg"
+              alt="Apex Racer Logo"
+              className="w-9 h-9 rounded-xl shadow-lg shadow-rose-600/30 object-cover border border-rose-500/40"
+              referrerPolicy="no-referrer"
+            />
             <div>
               <h1 className="text-xl font-black font-racing uppercase tracking-wider text-white leading-none">
                 Apex Racer 2D

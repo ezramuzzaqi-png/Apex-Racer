@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Car Body Gradient (Hyper Crimson) -->
+    <linearGradient id="carBodyGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="50%" stop-color="#ff0055" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+
+    <!-- Cockpit Glass -->
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Nitro Flame Glow -->
+    <linearGradient id="nitroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Soft Drop Glow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#f43f5e" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Icon Base -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" stroke="#f43f5e" stroke-width="2" stroke-opacity="0.4" />
+
+  <!-- Speed Lines in Background -->
+  <path d="M12 18 L12 46 M52 18 L52 46" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.3" />
+  <path d="M18 10 L18 54 M46 10 L46 54" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6 6" stroke-opacity="0.15" />
+
+  <!-- Dual Nitro Flame Streaks Behind Car -->
+  <path d="M26 48 L27 58 L29 48 Z" fill="url(#nitroGrad)" />
+  <path d="M35 48 L37 58 L38 48 Z" fill="url(#nitroGrad)" />
+
+  <!-- Group for Car with Neon Glow -->
+  <g filter="url(#neonGlow)">
+    <!-- Rear Wing / Spoiler -->
+    <rect x="22" y="45" width="20" height="3" rx="1.5" fill="#0f172a" stroke="#fb7185" stroke-width="0.8" />
+    <rect x="24" y="44" width="2" height="4" fill="#64748b" />
+    <rect x="38" y="44" width="2" height="4" fill="#64748b" />
+
+    <!-- Car Wheels / Tyres -->
+    <rect x="20" y="15" width="4" height="9" rx="2" fill="#09090b" stroke="#334155" stroke-width="0.7" />
+    <rect x="40" y="15" width="4" height="9" rx="2" fill="#09090b" stroke="#334155" stroke-width="0.7" />
+    <rect x="19.5" y="36" width="4.5" height="10" rx="2" fill="#09090b" stroke="#334155" stroke-width="0.7" />
+    <rect x="40" y="36" width="4.5" height="10" rx="2" fill="#09090b" stroke="#334155" stroke-width="0.7" />
+
+    <!-- Aerodynamic Supercar Main Body -->
+    <path d="
+      M 32 10
+      C 34 10, 36 12, 38 15
+      L 39 23
+      C 40 26, 42 29, 41 35
+      L 41 45
+      C 41 47, 39 48, 38 48
+      L 26 48
+      C 25 48, 23 47, 23 45
+      L 23 35
+      C 22 29, 24 26, 25 23
+      L 26 15
+      C 28 12, 30 10, 32 10
+      Z
+    " fill="url(#carBodyGrad)" stroke="#fda4af" stroke-width="0.8" />
+
+    <!-- Racing Center Livery Stripe -->
+    <path d="M 31 10 L 33 10 L 33 48 L 31 48 Z" fill="#ffffff" opacity="0.9" />
+
+    <!-- Windshield / Canopy -->
+    <path d="
+      M 28 21
+      L 36 21
+      C 37 25, 37 28, 36 32
+      L 28 32
+      C 27 28, 27 25, 28 21
+      Z
+    " fill="url(#glassGrad)" stroke="#7dd3fc" stroke-width="0.6" />
+
+    <!-- Windshield Reflection -->
+    <path d="M 29 23 L 33 23 L 31 29 L 29 29 Z" fill="#ffffff" opacity="0.3" />
+
+    <!-- Twin LED Headlights (Bright Cyan / White) -->
+    <circle cx="27.5" cy="13" r="1.5" fill="#38bdf8" />
+    <circle cx="27.5" cy="13" r="0.8" fill="#ffffff" />
+    <circle cx="36.5" cy="13" r="1.5" fill="#38bdf8" />
+    <circle cx="36.5" cy="13" r="0.8" fill="#ffffff" />
+
+    <!-- Twin LED Taillights (Fiery Red) -->
+    <rect x="25" y="47" width="3" height="1" rx="0.5" fill="#f43f5e" />
+    <rect x="36" y="47" width="3" height="1" rx="0.5" fill="#f43f5e" />
+  </g>
+
+  <!-- Gold Star / Apex Badge Accent in Corner -->
+  <circle cx="50" cy="14" r="5" fill="#f59e0b" stroke="#fef08a" stroke-width="1" />
+  <path d="M50 11 L51 13.5 L53.5 13.5 L51.5 15 L52.2 17.5 L50 16 L47.8 17.5 L48.5 15 L46.5 13.5 L49 13.5 Z" fill="#ffffff" />
+</svg>

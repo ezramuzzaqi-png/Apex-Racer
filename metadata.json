@@ -1,0 +1,6 @@
+{
+  "name": "Apex Racer 2D - Top Down Sport Racing",
+  "description": "Game balap mobil sport top-down 2D HTML5 Canvas dengan kontrol presisi, mobil lawan, nitro boost, dan audio efek interaktif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

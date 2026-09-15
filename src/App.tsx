@@ -210,7 +210,6 @@ export default function App() {
             onSelectSkin={setSelectedSkin}
             highScore={stats.highScore}
             onStartGame={handleStartGame}
-            onOpenHtmlModal={() => setIsHtmlModalOpen(true)}
           />
         )}
 

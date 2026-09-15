@@ -3,7 +3,7 @@ import { CarSkin, UserProfile } from '../types';
 import { CAR_SKINS, AVATAR_OPTIONS } from '../utils/constants';
 import { soundEngine } from '../utils/audio';
 import { drawCar } from '../utils/renderer';
-import { Trophy, Play, KeyRound, Sparkles, Code2, ShieldAlert, UserCog, ChevronRight } from 'lucide-react';
+import { Trophy, Play, KeyRound, Sparkles, ShieldAlert, UserCog, ChevronRight } from 'lucide-react';
 
 interface HomeMenuProps {
   userProfile: UserProfile;
@@ -13,7 +13,6 @@ interface HomeMenuProps {
   onSelectSkin: (skin: CarSkin) => void;
   highScore: number;
   onStartGame: () => void;
-  onOpenHtmlModal: () => void;
 }
 
 export const HomeMenu: React.FC<HomeMenuProps> = ({
@@ -24,7 +23,6 @@ export const HomeMenu: React.FC<HomeMenuProps> = ({
   onSelectSkin,
   highScore,
   onStartGame,
-  onOpenHtmlModal,
 }) => {
   const previewCanvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -77,16 +75,6 @@ export const HomeMenu: React.FC<HomeMenuProps> = ({
               </span>
             </div>
           </div>
-
-          <button
-            type="button"
-            onClick={onOpenHtmlModal}
-            className="px-2.5 py-1 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition-colors flex items-center gap-1.5 cursor-pointer"
-            title="Download atau salin file HTML mandiri"
-          >
-            <Code2 className="w-3.5 h-3.5 text-rose-400" />
-            <span>HTML Code</span>
-          </button>
         </div>
 
         {/* 1. Profil Pembalap Interaktif dengan Tombol Ganti Profil */}
